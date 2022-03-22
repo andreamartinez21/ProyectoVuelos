@@ -4,6 +4,8 @@ import javax.swing.JFrame;
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class VentanaInicioSesion extends JFrame{
 
@@ -34,7 +36,7 @@ public class VentanaInicioSesion extends JFrame{
         panelArriba.setBackground(new Color(0, 0, 51));
         panelMedio = new JPanel(new GridLayout(1, 2));
         panelMedio.setBackground(new Color(0, 0, 51));
-        panelAbajo = new JPanel(new BorderLayout());
+        panelAbajo = new JPanel(new GridLayout(1, 2));
         panelAbajo.setBackground(new Color(0, 0, 51));
 
         contentPane.add(panel);
@@ -70,12 +72,36 @@ public class VentanaInicioSesion extends JFrame{
 
         JPanel panelTextoContrasenya = new JPanel(); 
         panelTextoContrasenya.setBackground(new Color(0, 0, 51));
-        JTextField textoContrasenya = new JTextField();
+        JPasswordField textoContrasenya = new JPasswordField();
         textoContrasenya.setPreferredSize(new Dimension(150, 25));
         panelTextoContrasenya.add(textoContrasenya);
 
         panelMedio.add(panelLabelContrasenya);
         panelMedio.add(panelTextoContrasenya);
+
+        // botón volver
+
+        JPanel panelBotonVolver = new JPanel();
+        panelBotonVolver.setBackground(new Color(0, 0, 51));
+        JButton botonVolver = new JButton("Volver");
+        botonVolver.setFont(new Font("Yu Gothic UI", Font.PLAIN, 17));
+        botonVolver.setBackground(Color.DARK_GRAY);
+        botonVolver.setForeground(Color.WHITE);
+        botonVolver.setPreferredSize(new Dimension(150, 30));
+        panelBotonVolver.add(botonVolver);
+
+        botonVolver.addActionListener(new ActionListener() {
+				
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                try {
+                    new VentanaInicio();
+                } catch (Exception e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        });
 
         // botón acceder
 
@@ -85,9 +111,23 @@ public class VentanaInicioSesion extends JFrame{
         botonAcceder.setFont(new Font("Yu Gothic UI", Font.PLAIN, 17));
         botonAcceder.setBackground(Color.DARK_GRAY);
         botonAcceder.setForeground(Color.WHITE);
-        botonAcceder.setPreferredSize(new Dimension(160, 35));
+        botonAcceder.setPreferredSize(new Dimension(150, 30));
         panelBotonAcceder.add(botonAcceder);
 
+        botonAcceder.addActionListener(new ActionListener() {
+				
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                try {
+                    new VentanaMenuPrincipal();
+                } catch (Exception e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        panelAbajo.add(panelBotonVolver);
         panelAbajo.add(panelBotonAcceder);
 
         //
