@@ -20,7 +20,7 @@ public class VentanaMenuPrincipal extends JFrame{
     	
         setBackground(new Color(0, 0, 51));
 
-        setTitle("Inicio");
+        setTitle("Menú principal");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setPreferredSize(new Dimension(500, 350));
         setVisible(true);

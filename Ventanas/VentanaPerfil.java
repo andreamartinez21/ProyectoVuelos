@@ -19,7 +19,7 @@ public class VentanaPerfil extends JFrame{
     	
         setBackground(new Color(0, 0, 51));
 
-        setTitle("Inicio de sesión");
+        setTitle("Perfil");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setPreferredSize(new Dimension(500, 350));
         setVisible(true);
@@ -138,6 +138,38 @@ public class VentanaPerfil extends JFrame{
         // panelBotonEditar2.add(botonEditar3);
         
         // panelArriba.add(panelBotonEditar3);
+
+        // // label número de teléfono
+
+        // JPanel panelLabelNumeroTelefono = new JPanel();
+        // panelLabelNumeroTelefono.setBackground(new Color(0, 0, 51));
+        // JLabel labelNumeroTelefono = new JLabel("Número de teléfono: ");
+        // labelNumeroTelefono.setForeground(Color.WHITE);
+        // panelLabelNumeroTelefono.add(labelNumeroTelefono);
+
+        // // texto número de teléfono
+
+        // JPanel panelTextoNumeroTelefono = new JPanel(); 
+        // panelTextoNumeroTelefono.setBackground(new Color(0, 0, 51));
+        // JPasswordField textoNumeroTelefono = new JPasswordField();
+        // textoNumeroTelefono.setPreferredSize(new Dimension(150, 25));
+        // panelTextoNumeroTelefono.add(textoNumeroTelefono);
+
+        // panelArriba.add(panelLabelNumeroTelefono);
+        // panelArriba.add(panelTextoNumeroTelefono);
+
+        // // botón editar4
+
+        // JPanel panelBotonEditar4 = new JPanel();
+        // panelBotonEditar4.setBackground(new Color(0, 0, 51));
+        // JButton botonEditar4 = new JButton("Editar");
+        // botonEditar4.setFont(new Font("Yu Gothic UI", Font.PLAIN, 17));
+        // botonEditar4.setBackground(Color.DARK_GRAY);
+        // botonEditar4.setForeground(Color.WHITE);
+        // botonEditar4.setPreferredSize(new Dimension(100, 20));
+        // panelBotonEditar2.add(botonEditar4);
+        
+        // panelArriba.add(panelBotonEditar4);
 
         // botón volver
 
