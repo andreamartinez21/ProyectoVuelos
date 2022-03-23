@@ -93,18 +93,18 @@ public class VentanaMenuPrincipal extends JFrame{
         botonPerfil.setPreferredSize(new Dimension(160, 35));
         panelBotonPerfil.add(botonPerfil);
 
-        // botonPerfil.addActionListener(new ActionListener() {
+        botonPerfil.addActionListener(new ActionListener() {
 				
-        //     @Override
-        //     public void actionPerformed(ActionEvent arg0) {
-        //         try {
-        //             new VentanaInicioSesion();
-        //         } catch (Exception e) {
-        //             // TODO Auto-generated catch block
-        //             e.printStackTrace();
-        //         }
-        //     }
-        // });
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                try {
+                    new VentanaPerfil();
+                } catch (Exception e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        });
 
         panelMedio.add(panelBotonPerfil);
 
