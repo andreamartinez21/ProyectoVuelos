@@ -82,19 +82,18 @@ public class VentanaInicio extends JFrame{
         botonRegistrarse.setPreferredSize(new Dimension(190, 35));
         panelBotonRegistrarse.add(botonRegistrarse);
 
-        // botonGoogleLogin.addActionListener(new ActionListener() {
+        botonRegistrarse.addActionListener(new ActionListener() {
 				
-        //     @Override
-        //     public void actionPerformed(ActionEvent arg0) {
-        //         try {
-        //             panel3.setVisible(true);
-        //             panel.setVisible(false);
-        //         } catch (Exception e) {
-        //             // TODO Auto-generated catch block
-        //             e.printStackTrace();
-        //         }
-        //     }
-        // });
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                try {
+                    new VentanaRegistro();
+                } catch (Exception e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        });
 
         panelMedio.add(panelBotonRegistrarse);
 
