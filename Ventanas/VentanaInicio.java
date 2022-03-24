@@ -99,6 +99,8 @@ public class VentanaInicio extends JFrame{
 
         // botón comprar sin usuario
 
+        // PONER PARA QUE SI LE DAS DESDE AQUÍ VUELVA AL INICIO
+
         JPanel panelBotonComprarSinUsuario = new JPanel();
         panelBotonComprarSinUsuario.setBackground(new Color(0, 0, 51));
         JButton botonComprarSinUsuario = new JButton("Comprar sin usuario");
@@ -108,19 +110,18 @@ public class VentanaInicio extends JFrame{
         botonComprarSinUsuario.setPreferredSize(new Dimension(160, 35));
         panelBotonComprarSinUsuario.add(botonComprarSinUsuario);
 
-        // botonStravaLogin.addActionListener(new ActionListener() {
+        botonComprarSinUsuario.addActionListener(new ActionListener() {
 				
-        //     @Override
-        //     public void actionPerformed(ActionEvent arg0) {
-        //         try {
-        //             panel3.setVisible(true);
-        //             panel.setVisible(false);
-        //         } catch (Exception e) {
-        //             // TODO Auto-generated catch block
-        //             e.printStackTrace();
-        //         }
-        //     }
-        // });
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                try {
+                    new VentanaCompra();
+                } catch (Exception e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        });
 
         panelAbajo.add(panelBotonComprarSinUsuario);
 
@@ -128,7 +129,7 @@ public class VentanaInicio extends JFrame{
 
         panel.add(panelArriba, BorderLayout.NORTH);
         panel.add(panelMedio, BorderLayout.CENTER);
-        panel.add(panelAbajo, BorderLayout. SOUTH);
+        panel.add(panelAbajo, BorderLayout.SOUTH);
 
         contentPane.setVisible(true);
         panel.setVisible(true);

@@ -42,7 +42,7 @@ public class VentanaRegistro extends JFrame{
 
         // METER BORDES
 
-        // label ombre
+        // label nombre
 
         JPanel panelLabelNombre = new JPanel();
         panelLabelNombre.setBackground(new Color(0, 0, 51));
@@ -59,7 +59,7 @@ public class VentanaRegistro extends JFrame{
         panelArriba.add(panelLabelNombre);
         panelArriba.add(panelTextoNombre);
 
-        // label rrimer apellido
+        // label primer apellido
 
         JPanel panelLabelPrimerApellido = new JPanel();
         panelLabelPrimerApellido.setBackground(new Color(0, 0, 51));
@@ -69,7 +69,7 @@ public class VentanaRegistro extends JFrame{
 
         JPanel panelTextoPrimerApellido = new JPanel(); 
         panelTextoPrimerApellido.setBackground(new Color(0, 0, 51));
-        JPasswordField textoPrimerApellido = new JPasswordField();
+        JTextField textoPrimerApellido = new JTextField();
         textoPrimerApellido.setPreferredSize(new Dimension(150, 25));
         panelTextoPrimerApellido.add(textoPrimerApellido);
 

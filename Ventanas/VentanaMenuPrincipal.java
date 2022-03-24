@@ -66,19 +66,18 @@ public class VentanaMenuPrincipal extends JFrame{
         botonComprarBilletes.setPreferredSize(new Dimension(190, 35));
         panelBotonComprarBilletes.add(botonComprarBilletes);
 
-        // botonStravaLogin.addActionListener(new ActionListener() {
+        botonComprarBilletes.addActionListener(new ActionListener() {
 				
-        //     @Override
-        //     public void actionPerformed(ActionEvent arg0) {
-        //         try {
-        //             panel3.setVisible(true);
-        //             panel.setVisible(false);
-        //         } catch (Exception e) {
-        //             // TODO Auto-generated catch block
-        //             e.printStackTrace();
-        //         }
-        //     }
-        // });
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                try {
+                    new VentanaCompra();
+                } catch (Exception e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        });
 
         panelMedio.add(panelBotonComprarBilletes);
 
@@ -119,19 +118,18 @@ public class VentanaMenuPrincipal extends JFrame{
         botonMisViajes.setPreferredSize(new Dimension(160, 35));
         panelBotonMisViajes.add(botonMisViajes);
 
-        // botonGoogleLogin.addActionListener(new ActionListener() {
+        botonMisViajes.addActionListener(new ActionListener() {
 				
-        //     @Override
-        //     public void actionPerformed(ActionEvent arg0) {
-        //         try {
-        //             panel3.setVisible(true);
-        //             panel.setVisible(false);
-        //         } catch (Exception e) {
-        //             // TODO Auto-generated catch block
-        //             e.printStackTrace();
-        //         }
-        //     }
-        // });
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                try {
+                    new VentanaVerViajes();
+                } catch (Exception e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        });
 
         panelMedio.add(panelBotonMisViajes);
 

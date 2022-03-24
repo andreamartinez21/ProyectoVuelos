@@ -52,10 +52,11 @@ public class VentanaPerfil extends JFrame{
         panelLabelNombre.add(labelNombre);
 
         // texto nombre
+        // CAMBIAR TODO A LABELS
 
         JPanel panelTextoNombre = new JPanel(); 
         panelTextoNombre.setBackground(new Color(0, 0, 51));
-        JTextField textoNombre = new JTextField();
+        JLabel textoNombre = new JLabel("Andrea");
         textoNombre.setPreferredSize(new Dimension(150, 25));
         panelTextoNombre.add(textoNombre);
 
@@ -87,7 +88,7 @@ public class VentanaPerfil extends JFrame{
 
         JPanel panelTextoPrimerApellido = new JPanel(); 
         panelTextoPrimerApellido.setBackground(new Color(0, 0, 51));
-        JPasswordField textoPrimerApellido = new JPasswordField();
+        JLabel textoPrimerApellido = new JLabel("Martínez");
         textoPrimerApellido.setPreferredSize(new Dimension(150, 25));
         panelTextoPrimerApellido.add(textoPrimerApellido);
 
