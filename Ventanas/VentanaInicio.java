@@ -15,6 +15,8 @@ public class VentanaInicio extends JFrame{
     private JPanel panelArriba;
     private JPanel panelMedio;
     private JPanel panelAbajo;
+
+    static int var = 0;
     
 	public VentanaInicio() throws IOException {
     	
@@ -99,8 +101,6 @@ public class VentanaInicio extends JFrame{
 
         // botón comprar sin usuario
 
-        // PONER PARA QUE SI LE DAS DESDE AQUÍ VUELVA AL INICIO
-
         JPanel panelBotonComprarSinUsuario = new JPanel();
         panelBotonComprarSinUsuario.setBackground(new Color(0, 0, 51));
         JButton botonComprarSinUsuario = new JButton("Comprar sin usuario");
@@ -116,6 +116,7 @@ public class VentanaInicio extends JFrame{
             public void actionPerformed(ActionEvent arg0) {
                 try {
                     new VentanaCompra();
+                    var = 1;
                 } catch (Exception e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();

@@ -72,6 +72,7 @@ public class VentanaMenuPrincipal extends JFrame{
             public void actionPerformed(ActionEvent arg0) {
                 try {
                     new VentanaCompra();
+                    VentanaInicio.var = 2;
                 } catch (Exception e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();

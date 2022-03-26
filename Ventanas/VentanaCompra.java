@@ -47,7 +47,7 @@ public class VentanaCompra extends JFrame{
 
         JPanel panelRadioIdaVuelta = new JPanel();
         panelRadioIdaVuelta.setBackground(new Color(0, 0, 51));
-        JRadioButton radioIdaVuelta = new JRadioButton("Ida y vuelta");
+        JRadioButton radioIdaVuelta = new JRadioButton("Ida y vuelta", true);
         radioIdaVuelta.setBackground(Color.WHITE);
         panelRadioIdaVuelta.add(radioIdaVuelta);
 
@@ -57,11 +57,17 @@ public class VentanaCompra extends JFrame{
 
         JPanel panelRadioIda = new JPanel();
         panelRadioIda.setBackground(new Color(0, 0, 51));
-        JRadioButton radioIda = new JRadioButton("Ida");
+        JRadioButton radioIda = new JRadioButton("Ida", false);
         radioIda.setBackground(Color.WHITE);
         panelRadioIda.add(radioIda);
 
         panelMedio.add(panelRadioIda);
+
+        if(radioIdaVuelta.isSelected() == true){
+            radioIda.setSelected(false);
+        } else if(radioIda.isSelected() == true){
+            radioIdaVuelta.setSelected(false);
+        }
 
         // combo origen
 
@@ -97,6 +103,23 @@ public class VentanaCompra extends JFrame{
 
         panelArriba.add(panelComboDestino);
 
+        radioIdaVuelta.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				comboDestino.setVisible(true);
+                radioIda.setSelected(false);
+			}
+		});
+        radioIda.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				comboDestino.setVisible(false);
+                radioIdaVuelta.setSelected(false);
+			}
+		});
+
         // botón volver
 
         JPanel panelBotonVolver = new JPanel();
@@ -113,7 +136,11 @@ public class VentanaCompra extends JFrame{
             @Override
             public void actionPerformed(ActionEvent arg0) {
                 try {
-                    new VentanaMenuPrincipal();
+                    if(VentanaInicio.var == 1){
+                        new VentanaInicio();
+                    } else if(VentanaInicio.var == 2){
+                        new VentanaMenuPrincipal();
+                    }
                 } catch (Exception e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
@@ -147,10 +174,6 @@ public class VentanaCompra extends JFrame{
 
         panelAbajo.add(panelBotonVolver);
         panelAbajo.add(panelBotonSiguiente);
-
-        if(radioIda.isSelected() == true){
-            comboDestino.setVisible(false);
-        }
 
         //
 
