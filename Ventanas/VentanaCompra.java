@@ -159,18 +159,18 @@ public class VentanaCompra extends JFrame{
         botonSiguiente.setPreferredSize(new Dimension(150, 30));
         panelBotonSiguiente.add(botonSiguiente);
 
-        // botonSiguiente.addActionListener(new ActionListener() {
+        botonSiguiente.addActionListener(new ActionListener() {
 				
-        //     @Override
-        //     public void actionPerformed(ActionEvent arg0) {
-        //         try {
-        //             new VentanaMenuPrincipal();
-        //         } catch (Exception e) {
-        //             // TODO Auto-generated catch block
-        //             e.printStackTrace();
-        //         }
-        //     }
-        // });
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                try {
+                    new VentanaConfirmacionCompra();
+                } catch (Exception e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        });
 
         panelAbajo.add(panelBotonVolver);
         panelAbajo.add(panelBotonSiguiente);

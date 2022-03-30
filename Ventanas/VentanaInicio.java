@@ -16,6 +16,10 @@ public class VentanaInicio extends JFrame{
     private JPanel panelMedio;
     private JPanel panelAbajo;
 
+    JMenuBar menuBar;
+	JMenu menu;
+	JMenuItem itemInicio, itemGaleria, itemAdmin;
+
     static int var = 0;
     
 	public VentanaInicio() throws IOException {
@@ -42,6 +46,26 @@ public class VentanaInicio extends JFrame{
         panelAbajo.setBackground(new Color(0, 0, 51));
 
         contentPane.add(panel);
+
+        //menú
+
+
+		menuBar = new JMenuBar();
+        menuBar.setBackground(new Color(0, 0, 51));
+		menu = new JMenu("Más opciones");
+
+        itemInicio = new JMenuItem("Inicio");
+        itemInicio.setBackground(new Color(0, 0, 51));
+        itemGaleria = new JMenuItem("Galería");
+        itemGaleria.setBackground(new Color(0, 0, 51));
+        itemAdmin = new JMenuItem("Admin");
+        itemAdmin.setBackground(new Color(0, 0, 51));
+
+        setJMenuBar(menuBar);
+		menuBar.add(menu);
+		menu.add(itemInicio);
+		menu.add(itemGaleria);
+		menu.add(itemAdmin);
 
         // panel
 
