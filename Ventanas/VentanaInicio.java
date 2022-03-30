@@ -1,4 +1,4 @@
-package Ventanas;
+package ventanas;
 
 import javax.swing.JFrame;
 import javax.swing.*;
@@ -49,7 +49,6 @@ public class VentanaInicio extends JFrame{
 
         //menú
 
-
 		menuBar = new JMenuBar();
         menuBar.setBackground(new Color(0, 0, 51));
 		menu = new JMenu("Más opciones");
@@ -58,14 +57,24 @@ public class VentanaInicio extends JFrame{
         itemInicio.setBackground(new Color(0, 0, 51));
         itemGaleria = new JMenuItem("Galería");
         itemGaleria.setBackground(new Color(0, 0, 51));
-        itemAdmin = new JMenuItem("Admin");
-        itemAdmin.setBackground(new Color(0, 0, 51));
+
+        itemGaleria.addActionListener(new ActionListener() {
+				
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                try {
+                    new VentanaGaleria();
+                } catch (Exception e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        });
 
         setJMenuBar(menuBar);
 		menuBar.add(menu);
 		menu.add(itemInicio);
 		menu.add(itemGaleria);
-		menu.add(itemAdmin);
 
         // panel
 
