@@ -70,13 +70,13 @@ public class VentanaGaleria extends JFrame {
         for (int i = 0; i < numFotos; i++) {
             // Actividad actividad = listaActividades.get(i);
             
-            BufferedImage bufferedImage = ImageIO.read(new File("ProyectoVuelos/Imagenes/img"+i));
+            BufferedImage bufferedImage = ImageIO.read(new File("src/img/img" + String.valueOf(i) + ".png"));
             Image image = bufferedImage.getScaledInstance(400, 200, Image.SCALE_DEFAULT);
 
             JLabel labelImagen = new JLabel(new ImageIcon(image));
 
             JPanel panelBotonActividad = new JPanel();
-            JButton botonActividad = new JButton("Actividad " + i/*actividad.getNombre() + " - " + actividad.getUbicacion()*/);
+            JButton botonActividad = new JButton("Destino " + i/*actividad.getNombre() + " - " + actividad.getUbicacion()*/);
             botonActividad.setPreferredSize(new Dimension(200, 40));
             panelBotonActividad.add(botonActividad);
 
@@ -114,20 +114,22 @@ public class VentanaGaleria extends JFrame {
         botonVolver.setPreferredSize(new Dimension(200, 30));
         panelBotonVolver.add(botonVolver);
 
-        // botonVolver.addActionListener(new ActionListener() {
+        botonVolver.addActionListener(new ActionListener() {
 
-        //     @Override
-        //     public void actionPerformed(ActionEvent e) {
-        //         try {
-        //             new VentanaViaje(bd.getuActual());
-        //             dispose();
-        //         } catch (Exception e1) {
-        //         	bd.ficheroLogger();
-        //             bd.logger.log(Level.INFO, "No se puede abrir la ventana");
-        //             bd.closeLogger();
-        //         }
-        //     }
-        // });
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    new VentanaInicio();
+                    dispose();
+                } catch (Exception e1) {
+                	// bd.ficheroLogger();
+                    // bd.logger.log(Level.INFO, "No se puede abrir la ventana");
+                    // bd.closeLogger();
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
+            }
+        });
 
         panelAbajo.add(panelBotonVolver);
         panel.add(scroll, BorderLayout.NORTH);
