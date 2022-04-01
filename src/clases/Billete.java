@@ -2,9 +2,18 @@ package clases;
 
 public class Billete {
 
-    protected String localizador; // localizador del Viaje
     protected String nombre;
     protected String apellido;
-    protected boolean idaVuelta;
-    
+    protected Cliente cliente;
+    protected Viaje viajeIda;
+    protected Viaje viajeVuelta;
+    protected double precio;
+    protected int maletas;
+    protected String clase;
+    protected String asiento;
+
+    public Billete(){
+
+    }
 }
+

@@ -1,10 +1,9 @@
 package clases;
 
-public class Usuario {
+public class Usuario { // abstract
 
-    protected String nombre;
-    protected String apellido;
-    protected String dni;
-    protected String numTelefono;
+    protected String usuario;
+    protected String contrasenya;
+    
     
 }
