@@ -45,13 +45,14 @@ public class VentanaGaleria extends JFrame {
 
         // bd.connect();
 
-        setTitle("Galería destinos");
+        setTitle("Galería de destinos");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setPreferredSize(new Dimension(1000, 690));
         setVisible(true);
         pack();
 
         contentPane = new JPanel();
+        contentPane.setBackground(new Color(0, 0, 51));
         setContentPane(contentPane);
 
         // listaActividades = new ArrayList<Actividad>();
@@ -59,13 +60,18 @@ public class VentanaGaleria extends JFrame {
        
         double numFotos = /*listaActividades.size()*/ 8;
         panel = new JPanel(new BorderLayout());
+        panel.setBackground(new Color(0, 0, 51));
         
         double layoutY = Math.ceil(numFotos / 2);
         panelArriba = new JPanel(new GridLayout((int)layoutY, 2));
+        panelArriba.setBackground(new Color(0, 0, 51));
         
         scroll = new JScrollPane(panelArriba);
         scroll.setPreferredSize(new Dimension(990, 600));
+        scroll.setBackground(new Color(0, 0, 51));
         panelAbajo = new JPanel(new BorderLayout());
+        panelAbajo.setBackground(new Color(0, 0, 51));
+
 
         for (int i = 0; i < numFotos; i++) {
             // Actividad actividad = listaActividades.get(i);
@@ -76,6 +82,7 @@ public class VentanaGaleria extends JFrame {
             JLabel labelImagen = new JLabel(new ImageIcon(image));
 
             JPanel panelBotonActividad = new JPanel();
+            panelBotonActividad.setBackground(new Color(0, 0, 51));
             JButton botonActividad = new JButton("Destino " + i/*actividad.getNombre() + " - " + actividad.getUbicacion()*/);
             botonActividad.setPreferredSize(new Dimension(200, 40));
             panelBotonActividad.add(botonActividad);
@@ -98,6 +105,7 @@ public class VentanaGaleria extends JFrame {
             // });
 
             panelFotoBoton = new JPanel(new GridLayout(2, 1));
+            panelFotoBoton.setBackground(new Color(0, 0, 51));
 
             Border border = panelFotoBoton.getBorder();
             Border margin = new EmptyBorder(25, 0, -145, 0);
@@ -110,6 +118,7 @@ public class VentanaGaleria extends JFrame {
         }
 
         JPanel panelBotonVolver = new JPanel();
+        panelBotonVolver.setBackground(new Color(0, 0, 51));
         JButton botonVolver = new JButton("Volver");
         botonVolver.setPreferredSize(new Dimension(200, 30));
         panelBotonVolver.add(botonVolver);
